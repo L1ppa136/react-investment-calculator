@@ -3,7 +3,6 @@ import { RESULT_HEADERS } from '../data';
 import {calculateInvestmentResults, formatter} from "../util/investment";
 
 export default function ResultTable({inputData, ...props}) {
-    console.log(inputData);
     let investmentResults = calculateInvestmentResults(inputData);
     const initialInvestment = investmentResults[0].valueEndOfYear - investmentResults[0].interest - investmentResults[0].annualInvestment;
 

@@ -1,6 +1,15 @@
 import InputGroup from "./components/InputGroup";
 import ResultTable from "./components/ResultTable";
+import InvalidInputAlert from "./components/InvalidInputAlert";
 import {useState} from "react";
+
+
+function validateInputData(inputData){
+  if(inputData.duration <= 0){
+    return false;
+  }
+  return true;
+}
 
 function App() {
   const [inputData, setInputData] = useState({
@@ -18,9 +27,12 @@ function App() {
     });
   }
 
+  let isValidInputData = validateInputData(inputData);
+
   return <>
     <InputGroup handleInputChange={handleInputChange} inputData={inputData} id="user-input"/>
-    <ResultTable id="result" inputData={inputData} className="center"/>
+    {!isValidInputData && <InvalidInputAlert />}
+    {isValidInputData && <ResultTable id="result" inputData={inputData} className="center"/>}
   </>  
 }
 

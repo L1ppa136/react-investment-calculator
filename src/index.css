@@ -87,3 +87,16 @@ body {
 .center {
   text-align: center;
 }
+
+#alert-message{
+  width: 35%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 2rem;
+  padding: auto;
+  margin: auto;
+  border-radius: 0.25rem;
+  background: linear-gradient(180deg, #307e6c, #2b996d);
+}
