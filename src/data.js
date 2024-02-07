@@ -1,0 +1,1 @@
+export const RESULT_HEADERS = ["Year", "Investment Value", "Annual Interest", "Total Interest", "Invested Capital"];
